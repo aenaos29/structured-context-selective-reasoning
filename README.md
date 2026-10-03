@@ -123,6 +123,96 @@ This allows:
 
 ---
 
+## Tags as a Lightweight Semantic Layer
+
+Attributes are useful for structured filtering, but not every useful property of information needs to become a formal attribute.
+
+A lighter semantic layer can be provided through tags.
+
+For example:
+
+```text
+OBJECT: physics:2101
+
+ATTRIBUTES:
+LANGUAGE = EN
+DOMAIN = PHYSICS
+LEVEL = SECONDARY
+
+TAGS:
+force
+acceleration
+mass
+motion
+mechanics
+```
+
+Attributes provide relatively stable structured information.
+
+Tags provide a more flexible description of the semantic neighborhood surrounding an object.
+
+This creates a possible retrieval sequence:
+
+```text
+Query
+  ↓
+Tags identify a semantic neighborhood
+  ↓
+Attributes reduce the candidate set
+  ↓
+Relationships provide traversal paths
+  ↓
+Reasoning operates on the selected information
+```
+
+Tags therefore do not replace attributes or relationships.
+
+They serve a different purpose:
+
+> **Tags suggest where relevant information may be located.**
+
+> **Attributes determine which candidates are appropriate.**
+
+> **Relationships determine how those candidates connect.**
+
+---
+
+### Gradual Improvement
+
+The structure could also improve over time without rewriting the underlying information.
+
+If certain tags, relationships, entry points, or traversal paths repeatedly prove useful, the system could record that observation as a candidate improvement.
+
+For example:
+
+```text
+frequently successful path
+A → PREREQUISITE → B → EXPLAINS → C
+```
+
+may later justify:
+
+* strengthening an existing relationship,
+* proposing an additional tag,
+* creating a more useful entry point,
+* or caching a validated traversal path.
+
+Such changes should not automatically become permanent simply because they were used once.
+
+They can instead be treated as:
+
+```text
+OBSERVED
+→ REPEATED
+→ VALIDATED
+→ PROMOTED
+```
+
+This allows the knowledge structure to improve from use while preserving control over permanent changes.
+
+The objective is not to make the graph continuously rewrite itself.
+
+The objective is to allow successful use to reveal better ways of navigating information.
 ## Relationships Are Separate
 
 Relationships answer a different question:
@@ -466,3 +556,4 @@ Higher-capability engines reason over it.
 Reasoning effort controls how far exploration goes.
 
 And the system stops when it has enough evidence to answer.
+
