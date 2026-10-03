@@ -2,6 +2,7 @@
 
 ## A proposal for efficient AI knowledge retrieval and reasoning
 
+```text
 Query
   ↓
 Attributes / Tags
@@ -19,6 +20,7 @@ Selected Context
 Higher-Capability Engine Reasons
   ↓
 Validation / Early Stop
+```
 
 ### Summary
 
