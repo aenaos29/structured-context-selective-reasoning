@@ -2,6 +2,24 @@
 
 ## A proposal for efficient AI knowledge retrieval and reasoning
 
+Query
+  ↓
+Attributes / Tags
+  ↓
+Relevant IDs
+  ↓
+Known Entry Point or Previous Answer IDs
+  ↓
+Relationship Traversal
+  ↓
+Lower-Cost Engine Locates
+  ↓
+Selected Context
+  ↓
+Higher-Capability Engine Reasons
+  ↓
+Validation / Early Stop
+
 ### Summary
 
 This proposal describes a possible architecture for reducing unnecessary context and reasoning cost in large AI systems by separating:
